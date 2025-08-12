@@ -1,7 +1,7 @@
 {
-  "name": "@melfore/konva-timeline",
-  "version": "1.40.0",
-  "description": "Melfore ReactJS Timeline library made with Konva",
+  "name": "konva-timeline-header-customize",
+  "version": "0.1.0",
+  "description": "konva-timelineのグリッドのヘッダーをカスタマイズできるようにした",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -29,14 +29,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/melfore/konva-timeline.git"
+    "url": "https://github.com/Mattsun1203/konva-timeline-customize"
   },
-  "author": "@melfore",
+  "author": "Mattsun1203",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/melfore/konva-timeline/issues"
+    "url": "https://github.com/Mattsun1203/konva-timeline-customize/issues"
   },
-  "homepage": "https://github.com/melfore/konva-timeline#readme",
+  "homepage": "https://github.com/Mattsun1203/konva-timeline-customize#readme",
   "peerDependencies": {
     "konva": ">= 9.2.0 < 10",
     "luxon": ">= 3.3.0 < 4",
