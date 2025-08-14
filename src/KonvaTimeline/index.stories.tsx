@@ -387,3 +387,17 @@ export const CustomResource: Story = {
     customResources: customRes,
   },
 };
+
+export const CustomGridHeader: Story = {
+  args: {
+    ...Primary.args,
+    gridCellGroupHeader: (time) => {
+      if (!time) return "";
+      return time.setLocale("ja").toFormat("yyyy/MM/dd (ccc)");
+    },
+    gridCellHeader: (time) => {
+      if (!time) return "";
+      return time.toFormat("HH:mm");
+    },
+  },
+};

@@ -145,6 +145,14 @@ export type TimelineProviderProps = PropsWithChildren<TimelineInput> & {
    * Callback that return a personalized resources(this func return also the dimension of a single resourse)
    */
   customResources?: (resourceData: CustomRes) => React.JSX.Element;
+  /**
+   * Custom grid cell header
+   */
+  gridCellHeader?: (start: DateTime<true> | null) => string;
+  /**
+   * Custom grid cell group header
+   */
+  gridCellGroupHeader?: (start: DateTime<true> | null) => string;
 };
 
 type TimelineTheme = {
@@ -191,6 +199,8 @@ type TimelineContextType = Required<
   summaryWidth: number;
   summaryHeader?: string;
   customResources?: (resourceData: CustomRes) => React.JSX.Element;
+  gridCellHeader?: (start: DateTime<true> | null) => string;
+  gridCellGroupHeader?: (start: DateTime<true> | null) => string;
 };
 
 const TimelineContext = createContext<TimelineContextType | undefined>(undefined);
@@ -236,6 +246,8 @@ export const TimelineProvider = ({
   showSummary,
   summaryHeader,
   customResources,
+  gridCellHeader,
+  gridCellGroupHeader,
 }: TimelineProviderProps) => {
   const timezone = useMemo(() => {
     if (!externalTimezone) {
@@ -535,6 +547,8 @@ export const TimelineProvider = ({
         summaryHeader,
         summaryWidth,
         customResources,
+        gridCellHeader,
+        gridCellGroupHeader,
       }}
     >
       {children}

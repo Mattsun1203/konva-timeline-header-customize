@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react";
 
 import { KonvaLayer } from "../../@konva";
-import GridCells from "../Cells";
+import GridCellsHeader from "../GridCellsHeader";
 import GridRows from "../Rows";
 
 interface GridLayerProps {
@@ -12,7 +12,7 @@ const GridLayer: FC<GridLayerProps> = ({ height }) => {
   return (
     <KonvaLayer>
       <GridRows />
-      <GridCells height={height} />
+      <GridCellsHeader height={height} />
     </KonvaLayer>
   );
 };
