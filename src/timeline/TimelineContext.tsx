@@ -148,11 +148,11 @@ export type TimelineProviderProps = PropsWithChildren<TimelineInput> & {
   /**
    * Custom grid cell header
    */
-  gridCellHeader?: (start: DateTime<true> | null) => string;
+  gridCellHeader?: (start: DateTime<true> | null, end: DateTime<true> | null) => string;
   /**
    * Custom grid cell group header
    */
-  gridCellGroupHeader?: (start: DateTime<true> | null) => string;
+  gridCellGroupHeader?: (start: DateTime<true> | null, end: DateTime<true> | null) => string;
 };
 
 type TimelineTheme = {
@@ -199,8 +199,8 @@ type TimelineContextType = Required<
   summaryWidth: number;
   summaryHeader?: string;
   customResources?: (resourceData: CustomRes) => React.JSX.Element;
-  gridCellHeader?: (start: DateTime<true> | null) => string;
-  gridCellGroupHeader?: (start: DateTime<true> | null) => string;
+  gridCellHeader?: (start: DateTime<true> | null, end: DateTime<true> | null) => string;
+  gridCellGroupHeader?: (start: DateTime<true> | null, end: DateTime<true> | null) => string;
 };
 
 const TimelineContext = createContext<TimelineContextType | undefined>(undefined);

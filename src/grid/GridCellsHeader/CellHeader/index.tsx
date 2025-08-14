@@ -29,8 +29,8 @@ const GridCellHeader = ({ column, height, index, hourInfo: visibleDayInfo }: Gri
   } = useTimelineContext();
 
   const cellLabel = useMemo(() => {
-    const { start } = column;
-    return gridCellHeader ? gridCellHeader(start) : displayInterval(column, resolutionUnit, dateLocale!);
+    const { start, end } = column;
+    return gridCellHeader ? gridCellHeader(start, end) : displayInterval(column, resolutionUnit, dateLocale!);
   }, [column, resolutionUnit, dateLocale, gridCellHeader]);
 
   const xPos = useMemo(() => {

@@ -32,7 +32,7 @@ const GridCellGroupHeader = ({ column, index, dayInfo, hourInfo }: GridCellGroup
 
   const cellLabel = useMemo(() => {
     return gridCellGroupHeader
-      ? gridCellGroupHeader(column.start)
+      ? gridCellGroupHeader(column.start, column.end)
       : displayAboveInterval(column, unitAbove, dateLocale!);
   }, [gridCellGroupHeader, column, unitAbove, dateLocale]);
 
